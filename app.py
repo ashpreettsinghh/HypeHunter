@@ -50,10 +50,10 @@ def search_products(query):
 
 # Rest of your code...
 img = Image.open('img.png')
-st.image(img, width=600)
-st.title("Search Engine and Product Recommendation System ON Am Data")
+st.image(img, width=900)
+st.title("Search Engine and Product Recommendation")
 query = st.text_input("Enter Product Name")
-submit = st.button('Search')
+submit = st.button('Search for similar products')
 if submit:
     res = search_products(query)
     st.write(res)

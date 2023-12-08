@@ -1,3 +1,7 @@
+import subprocess
+
+subprocess.run(["python", "-m", "venv", "/path/to/venv"])
+subprocess.run(["/path/to/venv/bin/python", "-m", "pip", "install", "-r", "requirements.txt"])
 
 
 import pandas as pd

@@ -1,3 +1,13 @@
+import subprocess
+import nltk
+
+# Download the punkt resource
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
+# Rest of your code...
 import pandas as pd
 import numpy as np
 import nltk
@@ -38,13 +48,12 @@ def search_products(query):
     results = data.sort_values(by=['similarity'], ascending=False).head(10)[['Title', 'Description', 'Category']]
     return results
 
-# web app
+# Rest of your code...
 img = Image.open('img.png')
 st.image(img, width=600)
 st.title("Search Engine and Product Recommendation System ON Am Data")
 query = st.text_input("Enter Product Name")
 submit = st.button('Search')
-
 if submit:
     res = search_products(query)
     st.write(res)

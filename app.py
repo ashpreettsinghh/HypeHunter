@@ -1,11 +1,3 @@
-import subprocess
-
-subprocess.run(["python", "-m", "venv", "/path/to/venv"])
-subprocess.run(["/path/to/venv/bin/python", "-m", "pip", "install", "--upgrade", "pip"])
-subprocess.run(["/path/to/venv/bin/python", "-m", "pip", "install", "-r", "requirements.txt"])
-
-
-
 import pandas as pd
 import numpy as np
 import nltk
@@ -34,7 +26,6 @@ data['stemmed_tokens'] = data.apply(lambda row: tokenize_and_stem(row['Title'] +
 # Define TF-IDF vectorizer and cosine similarity function
 tfidf_vectorizer = TfidfVectorizer(tokenizer=tokenize_and_stem)
 def cosine_sim(text1, text2):
-    # tfidf_matrix = tfidf_vectorizer.fit_transform([text1, text2])
     text1_concatenated = ' '.join(text1)
     text2_concatenated = ' '.join(text2)
     tfidf_matrix = tfidf_vectorizer.fit_transform([text1_concatenated, text2_concatenated])
@@ -49,10 +40,11 @@ def search_products(query):
 
 # web app
 img = Image.open('img.png')
-st.image(img,width=600)
+st.image(img, width=600)
 st.title("Search Engine and Product Recommendation System ON Am Data")
 query = st.text_input("Enter Product Name")
-sumbit = st.button('Search')
-if sumbit:
+submit = st.button('Search')
+
+if submit:
     res = search_products(query)
     st.write(res)

@@ -1,6 +1,8 @@
 import subprocess
 import nltk
 
+nltk.download('all')
+
 # Download the punkt resource
 try:
     nltk.data.find('tokenizers/punkt')

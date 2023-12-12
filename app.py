@@ -1,3 +1,13 @@
+# import subprocess
+# import nltk
+
+# # Download the punkt resource
+# try:
+#     nltk.data.find('tokenizers/punkt')
+# except LookupError:
+#     nltk.download('punkt')
+
+
 import subprocess
 import nltk
 
@@ -5,7 +15,9 @@ import nltk
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
-    nltk.download('punkt')
+    subprocess.run(['python', '-m', 'nltk.downloader', 'punkt'])
+
+# Rest of your code...
 
 # Rest of your code...
 import pandas as pd

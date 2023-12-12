@@ -7,4 +7,4 @@ streamlit==0.84.1
 Pillow==8.3.1
 
 # Add NLTK data dependency
-nltk_data==3.6.2
+nltk_data==23.3.1

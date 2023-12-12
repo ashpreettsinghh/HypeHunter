@@ -1,7 +1,7 @@
 import subprocess
 import nltk
 
-nltk.download('all')
+#nltk.download('all')
 
 # Download the punkt resource
 try:

@@ -58,6 +58,16 @@ def search_products(query):
 # Rest of your code...
 img = Image.open('img.png')
 st.image(img, width=900)
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title("Search Engine and Product Recommendation")
 query = st.text_input("Enter Product Name")
 submit = st.button('Search for similar products')

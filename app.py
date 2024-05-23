@@ -72,7 +72,7 @@ st.title("Product Recommendation Engine")
 query = st.text_input("Enter Product Name")
 submit = st.button('Search for similar products')
 st.text('Team HypeHunter - Minor Project')
-st.text('Members - Ashpreet Singh , Amrit Gaur, Ishmeet Singh, Jashan Pal Singh')
+# st.text('Members - Ashpreet Singh , Amrit Gaur, Ishmeet Singh, Jashan Pal Singh')
 if submit:
     res = search_products(query)
     st.write(res)
